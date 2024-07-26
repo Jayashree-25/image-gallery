@@ -1,0 +1,43 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(214, 214, 206);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    gap: 10px;
+}
+.gallery-item{
+    width: calc(33.333% - 10px);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.gallery-item:hover{
+    transform: scale(1.05);
+}
+.lightbox{
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.lightbox-image{
+    max-width: 90%;
+    max-height: 80%;
+}
+.lightbox.show{
+    display: flex;
+}
